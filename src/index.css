@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Doors Pharmacy System base theme */
+:root {
+  /* Use `rgb(var(--brand))` in Tailwind arbitrary values */
+  --brand: 16 185 129; /* emerald-500 */
+  --brand-2: 59 130 246; /* blue-500 */
+  --bg: 248 250 252; /* slate-50 */
+  --card: 255 255 255;
+  --text: 15 23 42; /* slate-900 */
+  --muted: 100 116 139; /* slate-500 */
+  --ring: 16 185 129;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--text));
+}
+
+::selection {
+  background: rgba(16, 185, 129, 0.25);
+}
+
+/* Print helpers for receipts / Surat Pesanan */
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  body { background: white !important; }
+}
+
+.print-only { display: none; }
+
